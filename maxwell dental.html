@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxwell Dental Denture Clinic | Master Craftsmanship in Parramatta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-primary: #1a365d;
+            --brand-gold: #c5a059;
+            --brand-soft: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fff;
+            color: #2d3748;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Premium Transitions */
+        .page-fade {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .page-fade.active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Image Overlays */
+        .hero-overlay {
+            background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.4));
+        }
+
+        /* Glassmorphism */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-scrolled {
+            background: rgba(255, 255, 255, 0.95) !important;
+            padding: 0.75rem 0 !important;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .hover-gold { transition: all 0.3s ease; }
+        .hover-gold:hover { color: var(--brand-gold); }
+
+        .btn-gold {
+            background: var(--brand-gold);
+            color: white;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
+        }
+
+        .review-card {
+            border-left: 4px solid var(--brand-gold);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .mobile-hide { display: none; }
+            h1 { font-size: 2.5rem !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="bg-slate-900 text-white py-2 px-6 text-[11px] font-semibold tracking-widest uppercase flex justify-between items-center z-[60] relative">
+        <div class="flex gap-4">
+            <span><i class="fa-solid fa-location-dot text-gold mr-1"></i> Unit 13/2 O'Connell St, Parramatta</span>
+            <span class="mobile-hide"><i class="fa-solid fa-clock text-gold mr-1"></i> Mon - Fri: 9:00 AM - 5:00 PM</span>
+        </div>
+        <a href="tel:+61296332322" class="hover:text-gold transition-colors"><i class="fa-solid fa-phone mr-1"></i> +61 2 9633 2322</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="main-nav" class="fixed w-full z-50 py-6 transition-all duration-500 px-6 lg:px-12 bg-transparent">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" onclick="navigateTo('home')" class="flex flex-col">
+                <span class="text-2xl font-bold tracking-tighter serif leading-tight text-slate-900">MAXWELL DENTAL</span>
+                <span class="text-[10px] tracking-[0.4em] uppercase font-bold text-amber-600">Denture Clinic</span>
+            </a>
+
+            <div class="hidden lg:flex gap-10 items-center font-semibold text-sm tracking-wide">
+                <a href="#" onclick="navigateTo('home')" class="hover-gold text-slate-800">HOME</a>
+                <a href="#" onclick="navigateTo('services')" class="hover-gold text-slate-800">SERVICES</a>
+                <a href="#" onclick="navigateTo('about')" class="hover-gold text-slate-800">ABOUT</a>
+                <a href="#" onclick="navigateTo('reviews')" class="hover-gold text-slate-800">REVIEWS</a>
+                <button onclick="navigateTo('contact')" class="btn-gold px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest">Book Consultation</button>
+            </div>
+
+            <button class="lg:hidden text-2xl" id="menu-toggle"><i class="fa-solid fa-bars-staggered"></i></button>
+        </div>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="page-home" class="page-fade active">
+        <!-- Hero Section -->
+        <section class="relative h-screen flex items-center overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=2000" class="absolute inset-0 w-full h-full object-cover" alt="Modern Clinic">
+            <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent"></div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-2xl space-y-8">
+                    <div class="inline-block py-2 px-4 bg-amber-50 border-l-4 border-amber-600">
+                        <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-amber-800">Quality You Can Feel</span>
+                    </div>
+                    <h1 class="text-7xl font-bold text-slate-900 leading-[1.1]">The Art of the <br><span class="italic text-amber-600 font-normal">Perfect</span> Fit.</h1>
+                    <p class="text-xl text-slate-600 leading-relaxed max-w-lg">Over a decade of specialist denture craftsmanship in Parramatta. We don't just restore teeth; we restore your ability to eat, talk, and smile with absolute confidence.</p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <button onclick="navigateTo('contact')" class="btn-gold px-10 py-5 rounded-xl font-bold text-sm uppercase tracking-widest shadow-xl">Secure Your Visit</button>
+                        <button onclick="navigateTo('services')" class="bg-white border-2 border-slate-100 px-10 py-5 rounded-xl font-bold text-sm uppercase tracking-widest hover:border-amber-600 transition-all">Explore Services</button>
+                    </div>
+                    <div class="flex items-center gap-6 pt-12 border-t border-slate-200 w-fit">
+                        <div>
+                            <p class="text-2xl font-bold text-slate-900">5.0 <span class="text-amber-500 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></p>
+                            <p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest">Patient Rating</p>
+                        </div>
+                        <div class="w-[1px] h-10 bg-slate-200"></div>
+                        <div>
+                            <p class="text-2xl font-bold text-slate-900">10+ Yrs</p>
+                            <p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest">Durability Promise</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Info Blocks -->
+        <section class="py-24 bg-slate-50">
+            <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12">
+                <div class="glass-card p-10 rounded-3xl hover:shadow-2xl transition-all duration-500 group">
+                    <div class="w-16 h-16 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Skilled Precision</h3>
+                    <p class="text-slate-500 leading-relaxed">Every plate is custom-molded using medical-grade materials to ensure an airtight, comfortable fit for years.</p>
+                </div>
+                <div class="glass-card p-10 rounded-3xl hover:shadow-2xl transition-all duration-500 group translate-y-8">
+                    <div class="w-16 h-16 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Long-Lasting Results</h3>
+                    <p class="text-slate-500 leading-relaxed">Our patients report dentures lasting over 10 years, thanks to Maxwell's meticulous technical standards.</p>
+                </div>
+                <div class="glass-card p-10 rounded-3xl hover:shadow-2xl transition-all duration-500 group">
+                    <div class="w-16 h-16 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Compassionate Care</h3>
+                    <p class="text-slate-500 leading-relaxed">Pain problems? Movement issues? We take the time to listen and solve your dental plate frustrations.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- SERVICES PAGE -->
+    <div id="page-services" class="page-fade">
+        <section class="pt-48 pb-24 relative overflow-hidden bg-slate-900 text-white">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=2000" class="absolute inset-0 w-full h-full object-cover opacity-20" alt="Dental Background">
+            <div class="container mx-auto px-6 relative z-10 text-center">
+                <h1 class="text-6xl font-bold mb-6">Expert Solutions</h1>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg italic">"Reasonable pricing meets world-class technical skill."</p>
+            </div>
+        </section>
+
+        <section class="py-24 space-y-32">
+            <!-- Service 1 -->
+            <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+                <div class="space-y-6">
+                    <span class="text-amber-600 font-bold uppercase tracking-widest text-xs">Full & Partial</span>
+                    <h2 class="text-5xl font-bold text-slate-900 leading-tight">Custom Fabricated <br>New Dentures</h2>
+                    <p class="text-slate-500 text-lg leading-relaxed">Whether you need a complete set or just a partial plate, we focus on aesthetic integration. Your new teeth should look natural, feel lightweight, and provide enough stability for you to enjoy your meals again without worry.</p>
+                    <ul class="space-y-4 font-semibold text-slate-700">
+                        <li><i class="fa-solid fa-check text-amber-600 mr-3"></i> Premium Acrylic & Chrome Cobalt Options</li>
+                        <li><i class="fa-solid fa-check text-amber-600 mr-3"></i> Natural-Shade Tooth Selection</li>
+                        <li><i class="fa-solid fa-check text-amber-600 mr-3"></i> Multiple Fitting Sessions for Perfection</li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-amber-100 rounded-3xl -rotate-2 -z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover" alt="Service">
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+                <div class="lg:order-2 space-y-6">
+                    <span class="text-amber-600 font-bold uppercase tracking-widest text-xs">Repairs & Relining</span>
+                    <h2 class="text-5xl font-bold text-slate-900 leading-tight">Fast Repairs & <br>Maintenance</h2>
+                    <p class="text-slate-500 text-lg leading-relaxed">Dentures loose? Broken tooth? We offer rapid relining services to restore the suction of your plates and repair structural damage to keep your smile intact. We specialize in solving long-term discomfort issues.</p>
+                    <ul class="space-y-4 font-semibold text-slate-700">
+                        <li><i class="fa-solid fa-check text-amber-600 mr-3"></i> Same-Day Emergency Repairs</li>
+                        <li><i class="fa-solid fa-check text-amber-600 mr-3"></i> Professional Cleaning & Polishing</li>
+                        <li><i class="fa-solid fa-check text-amber-600 mr-3"></i> Gum-Fit Realignment (Relining)</li>
+                    </ul>
+                </div>
+                <div class="lg:order-1 relative">
+                    <div class="absolute -inset-4 bg-slate-100 rounded-3xl rotate-2 -z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&q=80&w=800" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover" alt="Repair Service">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="page-about" class="page-fade">
+        <section class="pt-48 pb-24 bg-amber-50">
+            <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffce47267a5?auto=format&fit=crop&q=80&w=1000" class="rounded-[3rem] shadow-2xl h-[600px] w-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Maxwell Professional">
+                </div>
+                <div class="space-y-8">
+                    <h1 class="text-5xl font-bold text-slate-900">Old Fashioned Care in a <span class="italic text-amber-600 font-normal underline decoration-slate-200">Modern World.</span></h1>
+                    <p class="text-xl text-slate-600 leading-relaxed">Maxwell is a highly skilled dental technician who takes deep pride in the quality of every plate that leaves this clinic. Based in the heart of Parramatta Business Centre, we've spent over a decade fixing "unfixable" dental problems.</p>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="p-6 bg-white rounded-2xl shadow-sm border border-amber-100">
+                            <h4 class="text-3xl font-bold text-amber-600">10+</h4>
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mt-2">Years of Proven Results</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-2xl shadow-sm border border-amber-100">
+                            <h4 class="text-3xl font-bold text-amber-600">100%</h4>
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mt-2">Quality Guarantee</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-500 italic">"I never been happier... Maxwell solved my problems that other clinics couldn't. Great to find old-fashioned service again." — Nadhim Abbas, Patient</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- REVIEWS PAGE -->
+    <div id="page-reviews" class="page-fade">
+        <section class="pt-48 pb-32">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="text-center mb-20 space-y-4">
+                    <h1 class="text-6xl font-bold text-slate-900">Patient Experiences</h1>
+                    <div class="flex justify-center text-amber-500 text-2xl gap-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-400 font-semibold tracking-widest uppercase text-xs">Verified 5.0 Rating on Google</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div class="review-card p-12 bg-white shadow-xl rounded-r-3xl relative overflow-hidden">
+                        <i class="fa-solid fa-quote-right absolute top-4 right-6 text-slate-50 text-8xl"></i>
+                        <p class="text-lg text-slate-600 italic mb-10 relative z-10 leading-relaxed">"Maxwell made a denture for me and it last over ten years. My teeth had movement, I returned for help. He is kind, friendly and patient. He guide me along to solve my pain problems."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-white font-bold">TC</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Thomas Cheung</h4>
+                                <p class="text-xs text-amber-600 font-bold uppercase">Patient (10+ Years)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card p-12 bg-white shadow-xl rounded-r-3xl relative overflow-hidden">
+                        <i class="fa-solid fa-quote-right absolute top-4 right-6 text-slate-50 text-8xl"></i>
+                        <p class="text-lg text-slate-600 italic mb-10 relative z-10 leading-relaxed">"Maxwell is a very skilled dental technician who takes pride in the quality of his work. I had dental plate problems for many years; Maxwell solved them for me. Great to find old fashioned care!"</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-white font-bold">JP</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">John Phillips</h4>
+                                <p class="text-xs text-amber-600 font-bold uppercase">Local Guide</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card p-12 bg-white shadow-xl rounded-r-3xl relative overflow-hidden md:col-span-2">
+                        <i class="fa-solid fa-quote-right absolute top-4 right-6 text-slate-50 text-8xl"></i>
+                        <p class="text-lg text-slate-600 italic mb-10 relative z-10 leading-relaxed">"It has been a year since I had my upper and lower dentures done by this gentleman and I never been happier. I had a bad experience before with a denture from Marsden dental Clinic that was bad and I had to throw them away... Maxwell solved it."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-white font-bold">NA</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Nadhim Abbas</h4>
+                                <p class="text-xs text-amber-600 font-bold uppercase">Patient Feedback</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="page-contact" class="page-fade">
+        <section class="pt-48 pb-24 bg-slate-50">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="bg-white rounded-[4rem] shadow-2xl overflow-hidden grid lg:grid-cols-2">
+                    <div class="p-16 bg-slate-900 text-white space-y-12">
+                        <h2 class="text-5xl font-bold leading-tight">Visit our Clinic in <span class="text-amber-500">Parramatta.</span></h2>
+                        <div class="space-y-8">
+                            <div class="flex gap-6">
+                                <div class="w-12 h-12 bg-amber-600/20 rounded-xl flex items-center justify-center text-amber-500 text-xl"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Our Location</h4>
+                                    <p class="text-slate-400 text-sm">Unit 13/2 O'Connell St, Parramatta NSW 2150<br>Floor 0 · Parramatta Business Centre</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div class="w-12 h-12 bg-amber-600/20 rounded-xl flex items-center justify-center text-amber-500 text-xl"><i class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Call for Booking</h4>
+                                    <p class="text-slate-400 text-sm">+61 2 9633 2322</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Simple Static Map Placeholder -->
+                        <div class="h-64 rounded-3xl overflow-hidden grayscale opacity-50 relative bg-slate-800">
+                           <div class="absolute inset-0 flex items-center justify-center text-center p-8">
+                               <p class="text-xs uppercase tracking-widest font-bold">Map Loading Support Disabled<br>Visit 2 O'Connell St</p>
+                           </div>
+                        </div>
+                    </div>
+
+                    <div class="p-16">
+                        <h3 class="text-3xl font-bold mb-8 text-slate-900">Book a Consultation</h3>
+                        <form class="space-y-6" onsubmit="event.preventDefault(); alert('Booking Request Received. We will contact you shortly.');">
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Your Full Name</label>
+                                <input type="text" placeholder="e.g. Thomas Cheung" class="w-full bg-slate-50 border-none rounded-xl p-5 outline-none ring-2 ring-slate-50 focus:ring-amber-600 transition-all" required>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Phone Number</label>
+                                <input type="tel" placeholder="0400 000 000" class="w-full bg-slate-50 border-none rounded-xl p-5 outline-none ring-2 ring-slate-50 focus:ring-amber-600 transition-all" required>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Service Required</label>
+                                <select class="w-full bg-slate-50 border-none rounded-xl p-5 outline-none ring-2 ring-slate-50 focus:ring-amber-600 transition-all cursor-pointer appearance-none">
+                                    <option>New Full Dentures</option>
+                                    <option>Partial Dentures</option>
+                                    <option>Denture Repair / Reline</option>
+                                    <option>General Pain Consultation</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full btn-gold py-6 rounded-2xl font-black text-lg shadow-2xl">Send Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-24 text-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-16 pb-20 border-b border-white/5">
+                <div class="space-y-6">
+                    <a href="#" class="flex flex-col">
+                        <span class="text-2xl font-bold tracking-tighter serif leading-tight">MAXWELL DENTAL</span>
+                        <span class="text-[10px] tracking-[0.4em] uppercase font-bold text-amber-500">Denture Clinic</span>
+                    </a>
+                    <p class="text-slate-500 text-sm leading-relaxed">Dedicated to the fine technical art of denture restoration and patient comfort in Sydney.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-amber-500 text-xs tracking-widest uppercase mb-8">Navigation</h5>
+                    <ul class="space-y-4 text-sm text-slate-400 font-medium">
+                        <li><a href="#" onclick="navigateTo('home')" class="hover:text-white transition-all">Home Page</a></li>
+                        <li><a href="#" onclick="navigateTo('services')" class="hover:text-white transition-all">Services</a></li>
+                        <li><a href="#" onclick="navigateTo('about')" class="hover:text-white transition-all">Our Story</a></li>
+                        <li><a href="#" onclick="navigateTo('reviews')" class="hover:text-white transition-all">Patient Reviews</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-amber-500 text-xs tracking-widest uppercase mb-8">Contact Info</h5>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li>Unit 13/2 O'Connell St, Parramatta</li>
+                        <li>Floor 0, Business Centre</li>
+                        <li>+61 2 9633 2322</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-amber-500 text-xs tracking-widest uppercase mb-8">Accreditations</h5>
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center text-xl text-slate-500"><i class="fa-solid fa-ribbon"></i></div>
+                        <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center text-xl text-slate-500"><i class="fa-solid fa-tooth"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-10 flex flex-col md:row justify-between items-center text-[10px] font-bold text-slate-600 tracking-[0.2em] uppercase">
+                <p>&copy; 2024 Maxwell Dental Denture Clinic. All Rights Reserved.</p>
+                <div class="flex gap-8 mt-4 md:mt-0">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth Navigation Logic
+        function navigateTo(pageId) {
+            const allPages = document.querySelectorAll('.page-fade');
+            
+            // Fade out current page
+            allPages.forEach(page => {
+                if (page.classList.contains('active')) {
+                    page.style.opacity = '0';
+                    setTimeout(() => {
+                        page.classList.remove('active');
+                        
+                        // Show and fade in new page
+                        const targetPage = document.getElementById('page-' + pageId);
+                        targetPage.classList.add('active');
+                        setTimeout(() => {
+                            targetPage.style.opacity = '1';
+                        }, 50);
+                    }, 600);
+                }
+            });
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Navbar Scroll Styling
+        window.onscroll = function() {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 80) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+        };
+
+        // Mobile Menu Logic (Simple)
+        const toggle = document.getElementById('menu-toggle');
+        toggle.onclick = function() {
+            alert("Mobile Menu Functionality Triggered. Navigation available in Desktop Mode or via Footer links.");
+        };
+    </script>
+</body>
+</html>
